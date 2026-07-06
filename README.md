@@ -85,21 +85,12 @@ curl "https://<your-api-url>?name=YourName"
 sam delete
 ```
 
-## How to talk about this in an interview
-
-- **"What does it do?"** → "It's a REST API with one endpoint. It takes a name and returns a greeting — built to learn the core serverless pattern: API Gateway routes a request to a Lambda function, which runs the code and returns a response."
-- **"Why Lambda instead of a normal server?"** → "There's no server to keep running or patch. AWS only runs the code when a request comes in, and you're billed per request/millisecond, not for idle time."
-- **"What's in the event object?"** → "API Gateway passes the whole HTTP request as a JSON object — I read `queryStringParameters` out of it to get the `name`."
-- **"How did you deploy it?"** → "Using AWS SAM — I define the Lambda and the API route in one YAML file (`template.yaml`), and `sam deploy` provisions everything on AWS automatically. No manual clicking in the console."
-
-## Resume bullet points (pick what applies)
-
-> - Built and deployed a serverless REST API on AWS using Lambda (Python) and API Gateway, provisioned entirely through Infrastructure as Code (AWS SAM).
-> - Learned and applied core serverless concepts: event-driven execution, pay-per-request pricing, and stateless function design.
-
 ## Natural next steps (good "what I'd add next" talking points)
 
 - Add a second endpoint (e.g. `/goodbye`) to show you can extend the API.
 - Connect it to a DynamoDB table to store and retrieve data (see the more advanced Task Management API version if you want to go further).
 - Add input validation (e.g. reject empty names) and proper error responses.
 - Write a simple unit test for the Lambda function using `pytest`.
+
+##Author 
+Rashmi
